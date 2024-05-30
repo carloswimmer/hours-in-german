@@ -1,0 +1,32 @@
+.digits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #61dafb;
+  font-size: 250px;
+}
+
+.hours {
+  text-align: right;
+  margin: 0;
+  min-width: 2ch;
+}
+
+.points {
+  text-align: center;
+  margin: 0;
+  min-width: 0.5ch;
+}
+
+.minutes {
+  text-align: left;
+  margin: 0;
+  min-width: 2ch;
+}
+
+@media screen and (max-width: 900px) {
+  .digits {
+    font-size: 28vw;
+  }
+}

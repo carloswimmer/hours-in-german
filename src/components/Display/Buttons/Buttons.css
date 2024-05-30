@@ -1,0 +1,37 @@
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.new-number {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.result {
+  background-color: transparent;
+  border: 2px solid #61dafb;
+  color: #61dafb;
+}
+
+@media screen and (max-width: 400px) {
+  .btn {
+    width: 100%;
+    margin: 0 32px;
+  }
+}
