@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import { effect, signal } from '@preact/signals';
+import { useDisplay } from '../../../hooks/useDisplay';
 import './Result.css';
-import { useDisplay } from '../../../contexts/display';
 
 export const Result = () => {
   const { hours, minutes, showResults } = useDisplay();
-  const [text, setText] = useState(timeMapper(hours, minutes));
+  const text = signal(timeMapper(hours.value, minutes.value));
 
-  useEffect(() => {
+  effect(() => {
     setTimeout(() => {
-      setText(timeMapper(hours, minutes));
+      text.value = timeMapper(hours.value, minutes.value);
     }, 750);
-  }, [hours, minutes]);
+  });
 
-  return <p className={`answer ${showResults}`}>{text}</p>;
+  return <p className={`answer ${showResults.value}`}>{text}</p>;
 };
 
 const timeMapper = (hour: number, minute: number) => {

@@ -1,14 +1,10 @@
-import { useEffect } from 'react';
+import { useDisplay } from '../../../hooks/useDisplay';
 import './Buttons.css';
-import { useDisplay } from '../../../contexts/display';
 
 export const Buttons = () => {
   const { createNewNumbers, toggleResults } = useDisplay();
 
-  useEffect(() => {
-    createNewNumbers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  createNewNumbers();
 
   return (
     <div className="buttons">

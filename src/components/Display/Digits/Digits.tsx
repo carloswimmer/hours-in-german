@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import './Digits.css';
-import { useDisplay } from '../../../contexts/display';
+import { useDisplay } from '../../../hooks/useDisplay';
 
 export const Digits = () => {
-  const { hours: randomHour, minutes: randomMinute } = useDisplay();
+  const {
+    hours: { value: randomHour },
+    minutes: { value: randomMinute },
+  } = useDisplay();
   const [displayedHour, setDisplayedHour] = useState(randomHour);
-  const [displayedMinute, setDisplayedMinute] = useState(randomHour);
+  const [displayedMinute, setDisplayedMinute] = useState(randomMinute);
   const prevHour = useRef(randomHour);
   const prevMinute = useRef(randomMinute);
 
@@ -35,10 +38,6 @@ export const Digits = () => {
     };
   }, [randomHour, randomMinute]);
 
-  const formatNumber = (number: number) => {
-    return number < 10 ? `0${number}` : number;
-  };
-
   return (
     <div className="digits">
       <p className="hours">{formatNumber(displayedHour)}</p>
@@ -46,4 +45,8 @@ export const Digits = () => {
       <p className="minutes">{formatNumber(displayedMinute)}</p>
     </div>
   );
+};
+
+const formatNumber = (number: number) => {
+  return number < 10 ? `0${number}` : number;
 };
