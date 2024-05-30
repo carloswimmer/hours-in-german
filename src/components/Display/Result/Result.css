@@ -6,7 +6,8 @@
   margin: 0 32px;
   opacity: 0;
   transform: scale(0);
-  transition: opacity 200ms,
+  transition:
+    opacity 200ms,
     transform 750ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 

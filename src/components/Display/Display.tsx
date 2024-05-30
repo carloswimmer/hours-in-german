@@ -1,7 +1,7 @@
-import "./Display.css";
-import { Result } from "./Result/Result";
-import { Buttons } from "./Buttons/Buttons";
-import { Digits } from "./Digits/Digits";
+import './Display.css';
+import { Result } from './Result/Result';
+import { Buttons } from './Buttons/Buttons';
+import { Digits } from './Digits/Digits';
 
 export const Display = () => {
   return (

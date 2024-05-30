@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import "./Digits.css";
-import { useDisplay } from "../../../contexts/display";
+import { useEffect, useRef, useState } from 'react';
+import './Digits.css';
+import { useDisplay } from '../../../contexts/display';
 
 export const Digits = () => {
   const { hours: randomHour, minutes: randomMinute } = useDisplay();

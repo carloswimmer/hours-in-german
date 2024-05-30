@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import "./Buttons.css";
-import { useDisplay } from "../../../contexts/display";
+import { useEffect } from 'react';
+import './Buttons.css';
+import { useDisplay } from '../../../contexts/display';
 
 export const Buttons = () => {
   const { createNewNumbers, toggleResults } = useDisplay();

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import "./Result.css";
-import { useDisplay } from "../../../contexts/display";
+import { useEffect, useState } from 'react';
+import './Result.css';
+import { useDisplay } from '../../../contexts/display';
 
 export const Result = () => {
   const { hours, minutes, showResults } = useDisplay();
@@ -17,19 +17,19 @@ export const Result = () => {
 
 const timeMapper = (hour: number, minute: number) => {
   const hourMapper: { [key: number]: string } = {
-    1: minute === 0 ? "Ein" : "Eins",
-    2: "Zwei",
-    3: "Drei",
-    4: "Vier",
-    5: "Fünf",
-    6: "Sechs",
-    7: "Sieben",
-    8: "Acht",
-    9: "Neun",
-    10: "Zehn",
-    11: "Elf",
-    12: "Zwölf",
-    13: "Eins",
+    1: minute === 0 ? 'Ein' : 'Eins',
+    2: 'Zwei',
+    3: 'Drei',
+    4: 'Vier',
+    5: 'Fünf',
+    6: 'Sechs',
+    7: 'Sieben',
+    8: 'Acht',
+    9: 'Neun',
+    10: 'Zehn',
+    11: 'Elf',
+    12: 'Zwölf',
+    13: 'Eins',
   };
 
   const times: { [key: number]: string } = {
