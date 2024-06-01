@@ -9,3 +9,19 @@ Click in the button `Neue Zeit` to get your next challenge.
 ## Check if you said it right
 
 Click in the button `Lösung` to see the hour as it is said in German.
+
+## How to run locally
+
+```bash
+npm run dev
+```
+
+## How to deploy
+
+```bash
+npm run build
+```
+
+```bash
+npm run deploy
+```
